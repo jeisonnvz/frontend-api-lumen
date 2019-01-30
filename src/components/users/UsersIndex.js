@@ -14,7 +14,7 @@ class UsersIndex extends  React.Component{
   <thead class="thead-dark">
     <tr>
       <th scope="col">Id</th>
-      <th scope="col">Name</th>
+      <th scope="col">Nombre</th>
       <th scope="col">Surname</th>
       <th scope="col">Username</th>
       <th scope="col">Email</th>
