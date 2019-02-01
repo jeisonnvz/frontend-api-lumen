@@ -23,13 +23,13 @@ class Header extends React.Component {
     const {isUserAuthenticated} = this.props;
 
     return (
-        // https://bootswatch.com/lumen/
+       
         <header>
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container">
               <NavLink className="navbar-brand" to={'/'}>
                 <i className="fas fa-project-diagram"></i>
-                <span>&nbsp;Project Manager</span></NavLink>
+                <span>&nbsp;Test Api</span></NavLink>
               <button className="navbar-toggler" type="button"
                       data-toggle="collapse" data-target="#navbarRight"
                       aria-controls="navbarRight" aria-expanded="false"
@@ -47,7 +47,7 @@ class Header extends React.Component {
 
                   <li className="nav-item">
                     <NavLink className="nav-link" to={'/projects'}
-                             activeStyle={{color: '#158CBA'}}>Projects</NavLink>
+                             activeStyle={{color: '#158CBA'}}>Currency</NavLink>
                   </li>
 
                   <li className="nav-item">
@@ -61,15 +61,7 @@ class Header extends React.Component {
 
                 </ul>}
                 
-                {!isUserAuthenticated &&
-                <ul className="navbar-nav ml-auto">
-                  <li className="nav-item">
-                    <NavLink className="btn btn-primary"
-                             to={'/create'}>sing up</NavLink>
-                             </li>
-                </ul>}
-
-                  
+            
                 {!isUserAuthenticated &&
                 <ul className="navbar-nav ml-auto">
                   <li className="nav-item">

@@ -11,12 +11,12 @@ class PublicHomeIndex extends React.Component {
               <h1 className="b-home__title">Currency</h1>
               <p className="b-home__summary">
                Mantente actualizado dia a dia  sobre los precios actuales e historicos de 
-               las diferentes Monedas como <em>Dolar, Euro, Pesos Argentinos y el Real brasilero</em> .
+               las diferentes Monedas como <em>Dolar, Euro, Peso Argentinos y el Real brasilero</em> .
               </p>
               
               <p>
-                <Link className="btn btn-warning" to={'/users'}>Login</Link>
-                <Link className="btn btn-warning" to={'/registrar'}>Sing up</Link></p>
+                <Link className="btn btn-warning" to={'/users'}>Login</Link></p>
+                
               
             </div>
             <div className="col-12 col-md-5 col-lg-5 col-xl-5">

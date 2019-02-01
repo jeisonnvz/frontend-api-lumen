@@ -3,15 +3,8 @@ import React from 'react';
 class UsersTable extends React.Component {
 
   handleClickOnIconToDeleteUser = (user) => {
-    // This function is passed as "prop"
-    // See more about in: https://www.javascriptstuff.com/component-communication/#3-callback-functions
+    
     this.props.onDeleteUser(user);
-  };
-
-  handleClickOnIconToUpdateUserStatus = (user) => {
-    // This function is passed as "prop"
-    user.status = user.status === 'ACTIVE' ? 'INACTIVE' : 'ACTIVE';
-    this.props.onUpdateUserStatus(user);
   };
 
   render() {
@@ -58,8 +51,5 @@ class UsersTable extends React.Component {
   }
 }
 
-// UsersTable.propTypes = {
-//   onDeleteUser: React.PropTypes.func,
-// };
 
 export default UsersTable;

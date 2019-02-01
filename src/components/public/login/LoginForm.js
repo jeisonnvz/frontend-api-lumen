@@ -59,13 +59,13 @@ class LoginForm extends React.Component {
                 <label htmlFor="username">Username* :</label>
                 <input id="username" name="username" className="form-control"
                        type="text" required
-                       defaultValue={'esmeralda-rodriguez'}/>
+                       defaultValue={'beentz'}/>
               </div>
 
               <div className="form-group">
                 <label htmlFor="password">Password* :</label>
                 <input id="password" name="password" className="form-control"
-                       type="password" required defaultValue={'esmeralda'}/>
+                       type="password" required defaultValue={'8131'}/>
               </div>
 
               <button type="submit" className="btn btn-primary">Submit

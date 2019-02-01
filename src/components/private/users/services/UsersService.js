@@ -10,7 +10,8 @@ class UsersService {
     // 1. Create "regular" headers
     const headers = {
       'Content-Type': 'application/json',
-      'X-Requested-With': 'XMLHttpRequest',
+      'X-Requested-With': 'XMLHttpRequest'
+      ,
     };
 
     // 2. GET the data from the Session Storage

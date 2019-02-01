@@ -14,21 +14,27 @@ class UsersIndex extends React.Component {
 
     const {users} = this.state;
 
+    const numberOfActiveUsers = users.filter(
+        user => user.status === 'ACTIVE').length;
+    const numberOfInactiveUsers = users.length - numberOfActiveUsers;
+
     return (
         <div className="b-content container">
           <div className="b-users">
 
-            <UsersTable users={users} onDeleteUser={this.handleClickDeleteUser}/>
+            <UsersTable users={users} onDeleteUser={this.handleClickDeleteUser}
+                        onUpdateUserStatus={this.handleClickUpdateUserStatus}/>
 
             <div className="row">
               <div className="col-12 col-sm-8 col-md-6">
                 <UsersFormCreate onCreateUser={this.handleOnCreateUser}/>
               </div>
-              
-            </div>  
+             
+              </div>
+            </div>
 
           </div>
-        </div>
+        
     );
   }
 
@@ -53,14 +59,14 @@ class UsersIndex extends React.Component {
     console.log('userToDelete', userToUpdate);
     this.setState(
         prevState => {
-          // Find the user
+          
           const indexToUpdate = prevState.users.findIndex(
               user => user.id === userToUpdate.id);
 
-          // Modify the user
+          
           prevState.users[indexToUpdate].status = userToUpdate.status;
 
-          // Return a new array with modified user
+        
           return {
             users: [...prevState.users],
           };
@@ -74,14 +80,6 @@ class UsersIndex extends React.Component {
     }));
   };
 
-  handleClickUpdateUserStatus = (user) => {
-    UsersService.updateUserStatus(user).then((response) => {
-      const user = response.data;
-      const {name, email} = user;
-      toast.success(`User updated: ${name} (${email})`);
-      this.updateUserFromCurrentState(user);
-    });
-  };
 
   handleClickDeleteUser = (user) => {
 
